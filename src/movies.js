@@ -18,7 +18,8 @@ function howManyMovies(moviesArray) {
 function scoresAverage(moviesArray) {
     const scoreArr = moviesArray.map(pelicula => pelicula.score);
     const sumaScore = scoreArr.reduce((a, b) => a + b);
-    return (sumaScore / scoreArr.length)
+    const finalScore = Math.round((sumaScore / scoreArr.length) * 100) / 100
+    return finalScore
 }
 
 // Iteration 4: Drama movies - Get the average of Drama Movies
